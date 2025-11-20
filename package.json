@@ -1,6 +1,6 @@
 {
     "name": "node-red-dashboard-2-ui-barcode-input",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Node-RED Dashboard 2.0 widget that supports input via USB barcode scanners",
     "keywords": [
         "node-red",
@@ -70,7 +70,6 @@
         }
     },
     "node-red-dashboard-2": {
-        
         "widgets": {
             "ui-barcode-input": {
                 "output": "ui-barcode-input.umd.js",
