@@ -1,0 +1,127 @@
+<script type="text/javascript">
+    RED.nodes.registerType('ui-barcode-input', {
+        category: RED._('@flowfuse/node-red-dashboard/ui-base:ui-base.label.category'),
+        color: RED._('@flowfuse/node-red-dashboard/ui-base:ui-base.colors.light'),
+        defaults: {
+            name: { value: "" },
+            group: { type: 'ui-group', required: true },
+            order: { value: 0 },
+            label: { value: "Barcode" },
+            placeholder: { value: "Scan barcode..." },
+            width: {
+                value: 0,
+                validate: function (v) {
+                    const width = v || 0
+                    const currentGroup = $('#node-input-group').val() || this.group
+                    const groupNode = RED.nodes.node(currentGroup)
+                    const valid = !groupNode || +width <= +groupNode.width
+                    $('#node-input-size').toggleClass('input-error', !valid)
+                    return valid
+                }
+            },
+            height: { value: 0 },
+            icon: { value: "barcode" },
+            iconPosition: { value: "left" },
+            iconInnerPosition: { value: "inside" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-barcode",
+        paletteLabel: 'barcode input',
+        label: function () {
+            return this.name || 'barcode input'
+        },
+        oneditprepare: function () {
+            $('#node-input-size').elementSizer({
+                width: '#node-input-width',
+                height: '#node-input-height',
+                group: '#node-input-group'
+            });
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="ui-barcode-input">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-group"><i class="fa fa-table"></i> Group</label>
+        <input type="text" id="node-input-group">
+    </div>
+    <div class="form-row">
+        <label><i class="fa fa-object-group"></i> <span data-i18n="ui-barcode-input.label.size"></label>
+        <input type="hidden" id="node-input-width">
+        <input type="hidden" id="node-input-height">
+        <button class="editor-button" id="node-input-size"></button>
+    </div>
+    <div class="form-row">
+        <label for="node-input-label"><i class="fa fa-tag"></i> Label</label>
+        <input type="text" id="node-input-label" placeholder="Barcode">
+    </div>
+    <div class="form-row">
+        <label for="node-input-placeholder"><i class="fa fa-i-cursor"></i> Placeholder</label>
+        <input type="text" id="node-input-placeholder" placeholder="Scan barcode...">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="ui-barcode-input">
+    <p>A specialized text input widget optimized for USB barcode scanner integration in Dashboard 2.0 applications.</p>
+    
+    <h3>Features</h3>
+    <ul>
+        <li><strong>Persistent Focus:</strong> Automatically maintains focus to ensure scanner input is always captured, even when users interact with other dashboard elements</li>
+        <li><strong>Universal Scanner Support:</strong> Works with all USB HID barcode scanners (EAN, Code 128, QR Code, Data Matrix, etc.)</li>
+        <li><strong>Auto-clear:</strong> Optionally clears the input field after each scan</li>
+        <li><strong>Material Design Icon:</strong> Configurable icon display</li>
+    </ul>
+
+    <h3>Properties</h3>
+    <dl class="message-properties">
+        <dt>Label <span class="property-type">string</span></dt>
+        <dd>Text label displayed with the input field. Default: "Barcode"</dd>
+        
+        <dt>Placeholder <span class="property-type">string</span></dt>
+        <dd>Hint text shown when input is empty. Default: "Scan barcode..."</dd>
+        
+        <dt>Icon <span class="property-type">string</span></dt>
+        <dd>Material Design icon name (without "mdi-" prefix). Default: "barcode"</dd>
+        
+        <dt>Clear on Send <span class="property-type">boolean</span></dt>
+        <dd>Automatically clear input after sending message. Default: true</dd>
+    </dl>
+
+    <h3>Output</h3>
+    <dl class="message-properties">
+        <dt>payload <span class="property-type">string</span></dt>
+        <dd>The scanned barcode value, trimmed of leading/trailing whitespace</dd>
+    </dl>
+
+    <h3>Usage</h3>
+    <p>The widget automatically captures input from USB barcode scanners. When a barcode is scanned (Enter key pressed), 
+    the value is sent as <code>msg.payload</code> to the output.</p>
+    
+    <p><strong>Focus Behavior:</strong> The input field maintains persistent focus through a global click handler. 
+    This ensures that barcode scanner input always reaches the correct field, regardless of where users click on the dashboard.</p>
+
+    <h3>Typical Applications</h3>
+    <ul>
+        <li>Warehouse management and inventory tracking</li>
+        <li>Manufacturing and packaging stations</li>
+        <li>Quality control checkpoints</li>
+        <li>Retail point-of-sale systems</li>
+        <li>Asset tracking and management</li>
+    </ul>
+
+    <h3>Details</h3>
+    <p>This widget extends the standard Dashboard 2.0 text input with specialized focus management logic. 
+    Three mechanisms ensure focus is maintained:</p>
+    <ol>
+        <li>Initial auto-focus on component mount</li>
+        <li>Immediate refocus on blur events</li>
+        <li>Global click handler that refocuses the field on any page interaction</li>
+    </ol>
+    <p>These mechanisms work together to create a seamless barcode scanning experience in production environments 
+    where operators may inadvertently click on other dashboard elements while working.</p>
+</script>

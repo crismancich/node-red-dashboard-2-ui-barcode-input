@@ -1,29 +1,30 @@
 {
-    "name": "@flowfuse/node-red-dashboard-2-ui-example",
+    "name": "@crismancich/node-red-dashboard-2-ui-barcode-input",
     "version": "1.0.0",
-    "description": "A basic example of a third-party node that integrates with Node-RED Dashboard 2.0",
-    "keywords": [
-        "node-red",
-        "node-red-dashboard-2"
-    ],
+  "description": "A Node-RED Dashboard 2.0 widget that supports input via USB barcode scanners",
+  "keywords": [
+    "node-red",
+    "node-red-dashboard-2",
+    "barcode",
+    "qrcode",
+    "datamatrix",
+    "EAN",
+    "scanner",
+    "USB",
+    "HID"
+  ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/flowfuse/node-red-dashboard-2-ui-example.git"
+        "url": "https://github.com/crismancich/node-red-dashboard-2-ui-barcode-input.git"
     },
     "license": "Apache-2.0",
     "author": {
-        "name": "Joe Pavitt",
-        "url": "https://github.com/joepavitt"
+        "name": "Boris Crismancich",
+        "url": "https://github.com/crismancich"
     },
-    "contributors": [
-        {
-            "name": "Pez Cuckow",
-            "url": "https://github.com/pezmc"
-        }
-    ],
     "exports": {
-        "import": "./resources/ui-example.esm.js",
-        "require": "./resources/ui-example.umd.js"
+        "import": "./resources/ui-barcode-input.esm.js",
+        "require": "./resources/ui-barcode-input.umd.js"
     },
     "files": [
         "nodes/*",
@@ -64,15 +65,15 @@
     "node-red": {
         "version": ">=3.0.0",
         "nodes": {
-            "ui-example": "nodes/ui-example.js"
+            "ui-barcode-input": "nodes/ui-barcode-input.js"
         }
     },
     "node-red-dashboard-2": {
         "version": "1.0.0",
         "widgets": {
-            "ui-example": {
-                "output": "ui-example.umd.js",
-                "component": "UIExample"
+            "ui-barcode-input": {
+                "output": "ui-barcode-input.umd.js",
+                "component": "UIBarcodeInput"
             }
         }
     }

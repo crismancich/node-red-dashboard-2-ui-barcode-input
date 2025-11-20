@@ -1,5 +1,5 @@
 module.exports = function (RED) {
-    function UIExampleNode (config) {
+    function UIBarcodeInputNode (config) {
         RED.nodes.createNode(this, config)
 
         const node = this
@@ -16,9 +16,9 @@ module.exports = function (RED) {
                 // check for any dynamic properties being set
                 const updates = msg.ui_update
                 if (updates) {
-                    if (typeof updates.example !== 'undefined') {
+                    if (typeof updates.barcodeInput !== 'undefined') {
                         // save the "example" property in the Node-RED statestore
-                        base.stores.state.set(base, node, msg, 'example', updates.example)
+                        base.stores.state.set(base, node, msg, 'barcodeInput', updates.barcodeInput)
                     }
                 }
                 return msg
@@ -50,5 +50,4 @@ module.exports = function (RED) {
         }
     }
 
-    RED.nodes.registerType('ui-example', UIExampleNode)
 }

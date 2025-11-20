@@ -5,6 +5,6 @@
  */
 import { createApp } from 'vue'
 
-import UIExample from './components/UIExample.vue'
+import UIExample from './components/UIBarcodeInput.vue'
 
 createApp(UIExample).mount('#app')
