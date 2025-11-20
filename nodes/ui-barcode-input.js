@@ -49,5 +49,5 @@ module.exports = function (RED) {
             node.error('No group configured')
         }
     }
-
+    RED.nodes.registerType('ui-barcode-input', UIBarcodeInputNode)
 }
