@@ -30,13 +30,13 @@ The widget automatically maintains focus on the input field, ensuring that barco
 1. Open Node-RED editor
 2. Click Menu (☰) → Manage palette
 3. Switch to "Install" tab
-4. Search for `@crismancich/node-red-dashboard-2-ui-barcode-input`
+4. Search for `node-red-dashboard-2-ui-barcode-input`
 5. Click "Install"
 
 ### Via npm
 ```bash
 cd ~/.node-red
-npm install @crismancich/node-red-dashboard-2-ui-barcode-input
+npm install node-red-dashboard-2-ui-barcode-input
 ```
 
 Restart Node-RED after installation.
