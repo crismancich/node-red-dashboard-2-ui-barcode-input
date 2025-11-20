@@ -1,0 +1,137 @@
+[
+    {
+        "id": "c5319a069d042f18",
+        "type": "tab",
+        "label": "Barcode",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9fae12811ddde2dd",
+        "type": "ui-barcode-input",
+        "z": "c5319a069d042f18",
+        "name": "",
+        "group": "6ee66489c53b6e6f",
+        "order": 0,
+        "label": "Barcode",
+        "placeholder": "Scan barcode...",
+        "width": 0,
+        "height": 0,
+        "icon": "barcode",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "98dca10a213dc60f"
+            ]
+        ]
+    },
+    {
+        "id": "98dca10a213dc60f",
+        "type": "debug",
+        "z": "c5319a069d042f18",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6ee66489c53b6e6f",
+        "type": "ui-group",
+        "name": "Scanner",
+        "page": "03815238406d2d0d",
+        "width": 6,
+        "height": 1,
+        "order": -1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "03815238406d2d0d",
+        "type": "ui-page",
+        "name": "Barcode",
+        "ui": "88e9726bcd740126",
+        "path": "/barcode",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "4edbd4194c303854",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": -1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "88e9726bcd740126",
+        "type": "ui-base",
+        "name": "UI Name",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "4edbd4194c303854",
+        "type": "ui-theme",
+        "name": "Theme Name",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    }
+]

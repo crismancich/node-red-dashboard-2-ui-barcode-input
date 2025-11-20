@@ -30,6 +30,7 @@
         "nodes/*",
         "ui/*",
         "resources/*"
+        "examples/*"
     ],
     "scripts": {
         "build": "vite build",
