@@ -1,6 +1,6 @@
 # Barcode Input Widget for Node-RED Dashboard 2.0
 
-[![npm version](https://badge.fury.io/js/%40flowfuse%2Fnode-red-dashboard-2-ui-barcode-input.svg)](https://www.npmjs.com/package/node-red-dashboard-2-ui-barcode-input)
+[![npm version](https://badge.fury.io/js/node-red-dashboard-2-ui-barcode-input.svg)](https://www.npmjs.com/package/node-red-dashboard-2-ui-barcode-input)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A specialized input widget for [Node-RED Dashboard 2.0](https://github.com/FlowFuse/node-red-dashboard) designed specifically for USB barcode scanner integration in industrial IoT and automation applications.
