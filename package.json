@@ -69,7 +69,7 @@
         }
     },
     "node-red-dashboard-2": {
-        "version": "1.0.0",
+        
         "widgets": {
             "ui-barcode-input": {
                 "output": "ui-barcode-input.umd.js",

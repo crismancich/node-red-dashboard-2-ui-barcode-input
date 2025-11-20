@@ -5,7 +5,7 @@
 
 A specialized input widget for [Node-RED Dashboard 2.0](https://github.com/FlowFuse/node-red-dashboard) designed specifically for USB barcode scanner integration in industrial IoT and automation applications.
 
-![Barcode Input Widget](docs/barcode-input-widget.png)
+![Barcode Input Widget](docs/images/barcode-input-widget.png)
 
 ## Key Features
 

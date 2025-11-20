@@ -26,3 +26,4 @@ dist-ssr
 
 # No need to include lock file
 package-lock.json*.tgz
+package-lock.json
