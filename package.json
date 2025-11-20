@@ -1,18 +1,18 @@
 {
-    "name": "@crismancich/node-red-dashboard-2-ui-barcode-input",
+    "name": "node-red-dashboard-2-ui-barcode-input",
     "version": "1.0.0",
-  "description": "A Node-RED Dashboard 2.0 widget that supports input via USB barcode scanners",
-  "keywords": [
-    "node-red",
-    "node-red-dashboard-2",
-    "barcode",
-    "qrcode",
-    "datamatrix",
-    "EAN",
-    "scanner",
-    "USB",
-    "HID"
-  ],
+    "description": "A Node-RED Dashboard 2.0 widget that supports input via USB barcode scanners",
+    "keywords": [
+        "node-red",
+        "node-red-dashboard-2",
+        "barcode",
+        "qrcode",
+        "datamatrix",
+        "EAN",
+        "scanner",
+        "USB",
+        "HID"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/crismancich/node-red-dashboard-2-ui-barcode-input.git"
